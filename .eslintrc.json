@@ -5,16 +5,16 @@
         "jest": true,
         "node": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
-    ],
     "settings": {
         "react": {
           "version": "detect"
         }
     },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
     "overrides": [
     ],
     "parser": "@typescript-eslint/parser",
@@ -24,7 +24,13 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "react-hooks"
     ],
-    "rules": {}
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/prop-types": "off",
+      "explicit-module-boundary-types": "off"
+    }
 }
